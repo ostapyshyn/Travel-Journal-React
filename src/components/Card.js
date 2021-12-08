@@ -4,15 +4,16 @@ import React from "react"
 
 export default function Card(props) {
     return (
-        <div>
+        <div className="card">
             <div className="card-image">
-                <img src={`/images/${props.imageUrl}`}/>
+                <img src={`/images/${props.imageUrl}`} className="image"/>
             </div>
+
             <div className="card-info">
                 <div className="card--stats">
-                    <img src='/images/point.png' className="card--point" />
+                    <img src='/images/point.png' className="card-point" />
                     <span className="location">{props.location}</span>
-                    <span className="map">View on Google Maps</span>
+                    <a className="map" href={props.googleMapsUrl}>View on Google Maps</a>
                 </div>
                 <div className="card--about">
                     <h2 className="card-title">{props.title}</h2>
@@ -20,7 +21,6 @@ export default function Card(props) {
                     <div className="card-text">{props.description}</div>
                 </div>
             </div>
-
         </div>
 
     )

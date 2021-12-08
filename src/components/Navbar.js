@@ -5,8 +5,10 @@ import React from "react"
 export default function Navbar() {
     return (
         <nav>
-            <h1 className="nav-logo">my travel journal.</h1>
-            {/*<img src='images/airbnb-logo.png' className="nav--logo" />*/}
+            <div className="nav-info">
+                <img src='images/world.png' className="nav--logo" />
+                <h1 className="nav-title">my travel journal.</h1>
+            </div>
         </nav>
     )
 }
